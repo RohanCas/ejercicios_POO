@@ -49,7 +49,7 @@ public:
 
     void reproducirCancion(int indice) {
         if (indice >= 0 && indice < cantidadCanciones) {
-            estado = 1; // Reproduciendo
+            estado = 1; 
             indiceActual = indice;
             std::cout << "Reproduciendo: " << canciones[indice] << std::endl;
         }
@@ -62,12 +62,12 @@ public:
     }
 
     void pausarCancion() {
-        estado = 2; // Pausado
+        estado = 2; 
         std::cout << "Pausado: " << canciones[indiceActual] << std::endl;
     }
 
     void detenerReproduccion() {
-        estado = 0; // Detenido
+        estado = 0; 
         indiceActual = -1;
         std::cout << "Reproduccion detenida." << std::endl;
     }
