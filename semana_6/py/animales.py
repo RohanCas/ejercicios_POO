@@ -1,3 +1,5 @@
+import os
+
 class Animal:
     def __init__(self, nombre, edad):
         self.nombre = nombre
@@ -26,6 +28,7 @@ perro1 = Perro("Buddy", 3)
 gato1 = Gato("Whiskers", 2)
 pajaro1 = Pajaro("Tweetie", 1)
 
+os.system('cls')
 print(f"{perro1.nombre} dice: {perro1.sonido()}")
 print(f"{gato1.nombre} dice: {gato1.sonido()}")
 print(f"{pajaro1.nombre} dice: {pajaro1.sonido()}")
