@@ -4,38 +4,28 @@ class Animal:
         self.edad = edad
 
     def sonido(self):
-        print("Sonido genérico de un animal.")
+        raise NotImplementedError("La función sonido debe ser implementada en las clases derivadas")
+
 
 class Perro(Animal):
-    def __init__(self, nombre, edad, raza):
-        super().__init__(nombre, edad)
-        self.raza = raza
-
     def sonido(self):
-        print("Guau guau")
+        return "Guau, guau"
+
 
 class Gato(Animal):
-    def __init__(self, nombre, edad, color):
-        super().__init__(nombre, edad)
-        self.color = color
-
     def sonido(self):
-        print("Miau miau")
+        return "Miau, miau"
+
 
 class Pajaro(Animal):
-    def __init__(self, nombre, edad, tipo):
-        super().__init__(nombre, edad)
-        self.tipo = tipo
-
     def sonido(self):
-        print("Pío pío")
+        return "Pío, pío"
 
 
-perro = Perro("Buddy", 3, "Labrador")
-perro.sonido()
+perro1 = Perro("Buddy", 3)
+gato1 = Gato("Whiskers", 2)
+pajaro1 = Pajaro("Tweetie", 1)
 
-gato = Gato("Whiskers", 2, "Blanco")
-gato.sonido()
-
-pajaro = Pajaro("Tweetie", 1, "Canario")
-pajaro.sonido()
+print(f"{perro1.nombre} dice: {perro1.sonido()}")
+print(f"{gato1.nombre} dice: {gato1.sonido()}")
+print(f"{pajaro1.nombre} dice: {pajaro1.sonido()}")
