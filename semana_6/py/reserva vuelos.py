@@ -34,8 +34,8 @@ class ReservaPrimeraClase(Reserva):
         super().mostrar_detalle()
         print(f"Tipo de reserva: Primera Clase\nServicio VIP: {'Sí' if self.servicio_vip else 'No'}")
 
-reserva_economica = ReservaEconomica("John Doe", 123, "2023-10-15", 15)
+reserva_economica = ReservaEconomica("Jose Josh", 123, "2023-10-15", 15)
 reserva_economica.mostrar_detalle()
 
-reserva_business = ReservaBusiness("Alice Smith", 456, "2023-10-15", "Premium")
+reserva_business = ReservaBusiness("Narea Lokism", 456, "2023-10-15", "Premium")
 reserva_business.mo
