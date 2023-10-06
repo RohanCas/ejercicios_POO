@@ -11,7 +11,7 @@ public:
         : nombre(nombre), precio(precio), categoria(categoria) {}
 
     virtual void mostrar_detalle() {
-        std::cout << "Nombre: " << nombre << "\nPrecio: " << precio << "\nCategoría: " << categoria << "\n";
+        std::cout << "Nombre: " << nombre << "\nPrecio: " << precio << "\nCategoria: " << categoria << "\n";
     }
 };
 
@@ -20,7 +20,7 @@ public:
     std::string marca;
 
     Electronico(std::string nombre, double precio, std::string marca)
-        : Producto(nombre, precio, "Electrónico"), marca(marca) {}
+        : Producto(nombre, precio, "Electronico"), marca(marca) {}
 
     void mostrar_detalle() override {
         Producto::mostrar_detalle();

@@ -3,62 +3,60 @@
 
 class Animal {
 public:
+    Animal(const std::string& nombre, int edad) : nombre(nombre), edad(edad) {}
+
+    virtual void sonido() const = 0;
+
+    void getInfo() const {
+        std::cout << "Nombre: " << nombre << ", Edad: " << edad << " anos" << std::endl;
+    }
+
+protected:
     std::string nombre;
     int edad;
-
-    Animal(std::string nombre, int edad)
-        : nombre(nombre), edad(edad) {}
-
-    virtual void sonido() {
-        std::cout << "Sonido genérico de un animal.\n";
-    }
 };
 
 class Perro : public Animal {
 public:
-    std::string raza;
+    Perro(const std::string& nombre, int edad) : Animal(nombre, edad) {}
 
-    Perro(std::string nombre, int edad, std::string raza)
-        : Animal(nombre, edad), raza(raza) {}
-
-    void sonido() override {
-        std::cout << "Guau guau\n";
+    void sonido() const override {
+        std::cout << "Guau, guau" << std::endl;
     }
 };
 
 class Gato : public Animal {
 public:
-    std::string color;
+    Gato(const std::string& nombre, int edad) : Animal(nombre, edad) {}
 
-    Gato(std::string nombre, int edad, std::string color)
-        : Animal(nombre, edad), color(color) {}
-
-    void sonido() override {
-        std::cout << "Miau miau\n";
+    void sonido() const override {
+        std::cout << "Miau, miau" << std::endl;
     }
 };
 
 class Pajaro : public Animal {
 public:
-    std::string tipo;
+    Pajaro(const std::string& nombre, int edad) : Animal(nombre, edad) {}
 
-    Pajaro(std::string nombre, int edad, std::string tipo)
-        : Animal(nombre, edad), tipo(tipo) {}
-
-    void sonido() override {
-        std::cout << "Pío pío\n";
+    void sonido() const override {
+        std::cout << "Pio, pio" << std::endl;
     }
 };
 
 int main() {
-    Perro dog("Buddy", 3, "Labrador");
-    dog.sonido();
+    Perro perro1("Buddy", 3);
+    Gato gato1("Whiskers", 2);
+    Pajaro pajaro1("Tweetie", 1);
 
-    Gato cat("Whiskers", 2, "Blanco");
-    cat.sonido();
+    
+    perro1.getInfo();
+    perro1.sonido();
 
-    Pajaro bird("Tweetie", 1, "Canario");
-    bird.sonido();
+    gato1.getInfo();
+    gato1.sonido();
+
+    pajaro1.getInfo();
+    pajaro1.sonido();
 
     return 0;
 }

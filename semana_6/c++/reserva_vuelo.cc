@@ -11,7 +11,7 @@ public:
         : nombre_del_pasajero(nombre), numero_de_vuelo(numero), fecha(fecha) {}
 
     virtual void mostrar_detalle() {
-        std::cout << "Pasajero: " << nombre_del_pasajero << "\nNúmero de vuelo: " << numero_de_vuelo
+        std::cout << "Pasajero: " << nombre_del_pasajero << "\nNumero de vuelo: " << numero_de_vuelo
                   << "\nFecha: " << fecha << "\n";
     }
 };
@@ -25,7 +25,7 @@ public:
 
     void mostrar_detalle() override {
         Reserva::mostrar_detalle();
-        std::cout << "Tipo de reserva: Económica\nAsiento: " << asiento << "\n";
+        std::cout << "Tipo de reserva: Economica\nAsiento: " << asiento << "\n";
     }
 };
 
@@ -51,18 +51,18 @@ public:
 
     void mostrar_detalle() override {
         Reserva::mostrar_detalle();
-        std::cout << "Tipo de reserva: Primera Clase\nServicio VIP: " << (servicioVIP ? "Sí" : "No") << "\n";
+        std::cout << "Tipo de reserva: Primera Clase\nServicio VIP: " << (servicioVIP ? "Si" : "No") << "\n";
     }
 };
 
 int main() {
-    ReservaEconomica economy("John Doe", 123, "2023-10-15", 15);
+    ReservaEconomica economy("carlitos", 123, "2023-10-15", 15);
     economy.mostrar_detalle();
 
-    ReservaBusiness business("Alice Smith", 456, "2023-10-15", "Premium");
+    ReservaBusiness business("jose", 456, "2023-10-15", "Premium");
     business.mostrar_detalle();
 
-    ReservaPrimeraClase firstClass("Bob Johnson", 789, "2023-10-16", true);
+    ReservaPrimeraClase firstClass("juan", 789, "2023-10-16", true);
     firstClass.mostrar_detalle();
 
     return 0;

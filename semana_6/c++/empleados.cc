@@ -10,7 +10,7 @@ public:
     Empleado(std::string nombre, int edad, double salario)
         : nombre(nombre), edad(edad), salario(salario) {}
 
-    virtual void describir_rol() {
+    virtual void describir_rol() const {
         std::cout << "Empleado genérico. Realiza tareas generales.\n";
     }
 };
@@ -22,7 +22,7 @@ public:
     Gerente(std::string nombre, int edad, double salario, std::string departamento)
         : Empleado(nombre, edad, salario), departamento(departamento) {}
 
-    void describir_rol() override {
+    void describir_rol() const override {
         std::cout << "Gerente. Supervisa el departamento: " << departamento << "\n";
     }
 };
@@ -34,7 +34,7 @@ public:
     Ingeniero(std::string nombre, int edad, double salario, std::string especialidad)
         : Empleado(nombre, edad, salario), especialidad(especialidad) {}
 
-    void describir_rol() override {
+    void describir_rol() const override {
         std::cout << "Ingeniero. Especializado en: " << especialidad << "\n";
     }
 };
@@ -46,20 +46,21 @@ public:
     Asistente(std::string nombre, int edad, double salario, std::string tarea)
         : Empleado(nombre, edad, salario), tarea(tarea) {}
 
-    void describir_rol() override {
+    void describir_rol() const override {
         std::cout << "Asistente. Realiza tareas administrativas: " << tarea << "\n";
     }
 };
 
 int main() {
-    Gerente manager("John Doe", 40, 80000.0, "Ventas");
+    Gerente manager("juan juan", 70, 80000.0, "Ventas");
     manager.describir_rol();
 
-    Ingeniero engineer("Alice Smith", 30, 60000.0, "Software");
+    Ingeniero engineer("jose jose", 50, 60000.0, "Software");
     engineer.describir_rol();
 
-    Asistente assistant("Bob Johnson", 25, 35000.0, "Asistencia administrativa");
+    Asistente assistant("Rob Robinson", 45, 35000.0, "Asistencia administrativa");
     assistant.describir_rol();
 
     return 0;
 }
+
