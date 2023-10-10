@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/megus/OneDrive/Documentos/GitHub/Programacion_Orientada_a_Objetos/ejercicios_POO",
-      "program": "c:/Users/megus/OneDrive/Documentos/GitHub/Programacion_Orientada_a_Objetos/ejercicios_POO/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
