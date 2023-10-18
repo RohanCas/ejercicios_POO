@@ -23,7 +23,7 @@ public:
         : Empleado(nombre, edad, salario), departamento(departamento) {}
 
     void describir_rol() const override {
-        std::cout << "Gerente. Supervisa el departamento: " << departamento << "\n";
+        std::cout << "Gerente. Supervisa el departamento: " << edad << "\n";
     }
 };
 
