@@ -64,6 +64,10 @@ private:
         if (low < high) {
             int pi = particion(low, high);
 
+
+            std::cout << "Lista parcial despues de la particion: ";
+            mostrarLista();
+
             quickSort(low, pi - 1);
             quickSort(pi + 1, high);
         }
@@ -107,7 +111,6 @@ private:
    
 
     void mostrarLista() {
-        std::cout << "Lista ordenada: ";
         for (int i = 0; i < lista.size(); ++i) {
             std::cout << lista[i] << " ";
         }
